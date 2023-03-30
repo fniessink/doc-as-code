@@ -1,0 +1,10 @@
+{
+    "ka": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
+    "contents": [
+        "index.py",
+        "index.md",
+        "measures/m31.json",
+        "measures/m01.json",
+        "measures/m29.json"
+    ]
+}
