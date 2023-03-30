@@ -1,6 +1,6 @@
 {
     "ka": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
-    "contents": [
+    "_paths": [
         "index.py",
         "index.md",
         "measures/m31.json",

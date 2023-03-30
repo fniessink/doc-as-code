@@ -1,3 +1,3 @@
 # $ka
 
-Gemaakt: $now
+Gegenereerd op: $now
