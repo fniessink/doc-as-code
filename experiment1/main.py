@@ -21,7 +21,7 @@ def process_json(path: Path, context: Context) -> None:
 
 def process_md(path: Path, context: Context) -> None:
     """Read the Markdown file, substitute the context, and print the resulting Markdown to stdout."""
-    mapping = defaultdict(default_factory=lambda: "", **context)
+    mapping = defaultdict(str, **context)  # Insert empty strings for missing substitutions
     with path.open("r") as markdown_file:
         print(string.Template(markdown_file.read()).substitute(mapping))
 
@@ -47,7 +47,9 @@ def parse_args() -> tuple[Path, Context] | NoReturn:
     parser = argparse.ArgumentParser()
     parser.add_argument("filename", help="JSON file to process")
     namespace, unknown = parser.parse_known_args()
-    return Path(namespace.filename), dict([argument.strip("-").split("=") for argument in unknown])
+    path = Path(namespace.filename)
+    context = dict([argument.strip("-").split("=") for argument in unknown])  # Convert ["--foo=bar"] into dict(foo=bar)
+    return path, context
 
 
 if __name__ == "__main__":
