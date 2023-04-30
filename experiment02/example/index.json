@@ -1,0 +1,15 @@
+{
+    "context": {
+        "title": "Kwaliteitsaanpak"
+    },
+    "contents": [
+        {
+            "paths": [
+                "measures/m01.json",
+                "measures/m29.json",
+                "measures/m31.json"
+            ],
+            "template": "template.md"
+        }
+    ]
+}
